@@ -28,11 +28,24 @@ public class First {
 
     private void compressBoxes(ArrayList<String> boxes1, ArrayList<String> boxes2){
         for (String s1 : boxes1) {
+            // runs n times
             System.out.println("compressed");
         }
         for (String s2 : boxes2) {
+            // runs m times
             System.out.println("compressed");
         }
+        // complexity O(n+m)
+    }
+
+    private void logPairsOfArray(){
+        int[] boxes = new int[]{1,2,3,4,5};
+        for (int i = 0; i < boxes.length-1; i++) {
+            for (int j = i+1; j < boxes.length; j++) {
+                System.out.println(boxes[i] + " with " + boxes[j ]);
+            }
+        }
+        // complexity O(n*(n-1)) = O(n^2 + 2n) = o(n^2)
     }
 
 

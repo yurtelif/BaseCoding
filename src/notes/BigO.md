@@ -20,3 +20,9 @@ private void compressBoxes(ArrayList<String> boxes1, ArrayList<String> boxes2){
     }
 ```
    Complexity is O(n+m)
+   
+4. Drop Non Dominants
+
+       O(n^2 + 2n +100) = O(n^2)  
+
+https://www.bigocheatsheet.com/ 
