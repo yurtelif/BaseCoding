@@ -2,6 +2,8 @@ package code;
 
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
 
 public class ArrayExamples {
 
@@ -20,6 +22,9 @@ public class ArrayExamples {
 
         System.out.println(Arrays.toString(mergeSortedArray(arr1, arr2)));
 
+        int[] arr3 = new int[]{2,7,11,15};
+
+        System.out.println(Arrays.toString(twoSum(arr3, 9)));
     }
 
     /**
@@ -69,6 +74,23 @@ public class ArrayExamples {
 
         return result;
     }
+
+    public static int[] twoSum(int[] nums, int target) {
+        //[2,7,11,15]
+        int[] result = new int[2];
+        HashMap<Integer, Integer> hashMap = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            if (hashMap.containsKey(nums[i])){
+                result[0]= hashMap.get(nums[i]);
+                result[1]= i;
+                break;
+            }
+            System.out.println(target-nums[i] + " " + i);
+            hashMap.put(target-nums[i],i);
+        }
+        return result;
+    }
+
 
 
 }
